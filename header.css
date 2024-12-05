@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
 }
 
-.container {
+.container-header {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -13,8 +13,9 @@ body {
     align-items: center;
 }
 
-/* Header Styles */
-.header {
+
+/* Header */
+.header-home {
     background-color: white;
     color: black;
     padding: 10px 0;
@@ -24,7 +25,7 @@ body {
     position: relative;
 }
 
-.logo img {
+.logo-header img {
     max-height: 110px;
 }
 
@@ -85,7 +86,7 @@ body {
     display: block;
 }
 
-/* Responsive Styles */
+/* Responsive  */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
