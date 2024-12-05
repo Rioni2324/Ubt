@@ -14,7 +14,6 @@ body {
 }
 
 
-/* Header */
 .header-home {
     background-color: white;
     color: black;
@@ -53,7 +52,6 @@ body {
     color: #ffd700;
 }
 
-/* Burger Menu */
 .burger-menu {
     display: none;
     flex-direction: column;
@@ -68,7 +66,7 @@ body {
     border-radius: 2px;
 }
 
-/* Contact Info */
+
 .contact-info {
     text-align: right;
 }
@@ -86,7 +84,7 @@ body {
     display: block;
 }
 
-/* Responsive  */
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
