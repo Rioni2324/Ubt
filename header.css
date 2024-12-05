@@ -2,8 +2,6 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(90deg, #0056b3, #0073e6);
-
 }
 
 .container {
@@ -15,10 +13,10 @@ body {
     align-items: center;
 }
 
-/* Header  */
+/* Header Styles */
 .header {
-    background: linear-gradient(90deg, #0056b3, #0073e6);
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
@@ -44,7 +42,7 @@ body {
 }
 
 .nav-links li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
@@ -80,21 +78,20 @@ body {
 }
 
 .contact-info a {
-    color: white;
+    color: black;
     font-weight: bold;
     text-decoration: none;
     font-size: 16px;
     display: block;
 }
 
-/* Responsive */
-
+/* Responsive Styles */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
         gap: 15px;
-        background: #005bea;
+        background: white;
         position: absolute;
         top: 100%;
         right: 0;
@@ -115,3 +112,5 @@ body {
         display: none;
     }
 }
+
+
