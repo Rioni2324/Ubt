@@ -225,3 +225,15 @@ body {
     margin: 20px auto;
 }
 
+.vision-section h2 {
+    text-align: center;
+    color: black;
+    font-size: 35px;
+}
+
+.vision-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px ;
+}
