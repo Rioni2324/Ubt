@@ -237,3 +237,14 @@ body {
     align-items: center;
     gap: 20px ;
 }
+
+.text-content{
+    flex: 1;
+    padding: 20px;
+}
+
+.vision-image img{
+    width: 450px;
+    border-radius: 8px;
+}
+
