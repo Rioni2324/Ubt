@@ -354,4 +354,11 @@ body {
     text-decoration: underline; 
 }
 
+@media (max-width: 600px) {
+    .footer-links li {
+        display: block; 
+        margin: 10px 0; 
+    }
+}
+
 
