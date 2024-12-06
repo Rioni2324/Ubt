@@ -340,4 +340,9 @@ body {
     padding: 0; 
 }
 
+.footer-links li {
+    display: inline; 
+    margin: 0 10px; 
+}
+
 
