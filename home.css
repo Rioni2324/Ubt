@@ -335,4 +335,9 @@ body {
     margin: 0; 
 }
 
+.footer-links {
+    list-style-type: none; 
+    padding: 0; 
+}
+
 
