@@ -42,7 +42,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 100px;
+    gap: 50px;
     margin: 0;
     padding: 0;
 }
@@ -55,7 +55,7 @@ body {
 }
 
 .nav-links li a:hover {
-    color: #ffd700;
+    color: #4c91af;
 }
 
 .burger-menu {
