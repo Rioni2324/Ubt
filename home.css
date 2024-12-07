@@ -151,8 +151,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-
-
 .hero-image img {
     max-width: 100%;
     height: auto;
