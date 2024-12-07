@@ -143,18 +143,15 @@ body {
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ffffff;
-    color: #0056b3;
+    background-color: #0056b3;
+    color: black;
     font-weight: bold;
     border-radius: 50px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.cta-button:hover {
-    background-color: #ffd700;
-    color: #0056b3;
-}
+
 
 .hero-image img {
     max-width: 100%;
