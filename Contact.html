@@ -75,45 +75,55 @@
     
 </body>
 <script>
-    document.querySelector("form").addEventListener("submit", function(event) {
-        let isValid = true;
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+    
+       
+    
+        form.addEventListener("submit", function (event) {
+            let isValid = true;
+            let errorMessages = [];
+    
+            
+            const emri = document.getElementById("emri");
+            const mbiemri = document.getElementById("mbiemri");
+            const email = document.getElementById("email");
+            const telefon = document.getElementById("telefon");
+            const mesazh = document.getElementById("mesazh");
+    
+            
+            if (!emri || emri.value.trim() === "") {
+                isValid = false;
+                errorMessages.push("Ju lutem plotësoni emrin.");
+            }
+            if (!mbiemri || mbiemri.value.trim() === "") {
+                isValid = false;
+                errorMessages.push("Ju lutem plotësoni mbiemrin.");
+            }
+            if (!email || !validateEmail(email.value.trim())) {
+                isValid = false;
+                errorMessages.push("Ju lutem plotësoni një email të vlefshëm.");
+            }
+            if (!telefon || !validatePhone(telefon.value.trim())) {
+                isValid = false;
+                errorMessages.push("Ju lutem plotësoni një numër telefoni të vlefshëm.");
+            }
+            if (!mesazh || mesazh.value.trim() === "") {
+                isValid = false;
+                errorMessages.push("Ju lutem shkruani mesazhin tuaj.");
+            }
     
         
-        const emri = document.getElementById("emri");
-        const mbiemri = document.getElementById("mbiemri");
-        const email = document.getElementById("email");
-        const telefon = document.getElementById("telefon");
-        const mesazh = document.getElementById("mesazh");
-    
-        
-        if (emri.value.trim() === "") {
-            isValid = false;
-            alert("Ju lutem plotësoni emrin.");
-        }
-        if (mbiemri.value.trim() === "") {
-            isValid = false;
-            alert("Ju lutem plotësoni mbiemrin.");
-        }
-        if (!validateEmail(email.value)) {
-            isValid = false;
-            alert("Ju lutem futni një email të vlefshëm.");
-        }
-        if (!validatePhone(telefon.value)) {
-            isValid = false;
-            alert("Ju lutem futni një numër telefoni të vlefshëm.");
-        }
-        if (mesazh.value.trim() === "") {
-            isValid = false;
-            alert("Ju lutem shkruani mesazhin tuaj.");
-        }
-    
-        
-        if (!isValid) {
-            event.preventDefault();
-        }
+            if (!isValid) {
+                event.preventDefault();
+                alert(errorMessages.join("\n"));
+            } else {
+                console.log("Forma u plotesua me sukses!");
+            }
+        });
     });
     
-    
+   
     function validateEmail(email) {
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(email);
