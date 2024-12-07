@@ -143,7 +143,7 @@ body {
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ffffff;
+    background-color: #e0ebec;
     color: #0056b3;
     font-weight: bold;
     border-radius: 50px;
@@ -152,7 +152,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #e0ebec;
+    background-color: #7081825f;
     color: #0056b3;
 }
 
