@@ -116,84 +116,79 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
 .container {
-    padding: 50px;
-    display: flex;
-   
-    max-width: 1200px;
-    background-color: #fff;
+    background-color: white;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.left-section, .right-section {
-    
-    flex: 1;
-    padding: 20px;
-}
-
-.left-section {
-    background-color: #f0f0f0;
-    border-right: 2px solid #ddd;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    margin-top: 50px; 
+    margin-right:auto;
+    margin-left: auto;
 }
 
-.left-section h2 {
-  text-align: right;
+
+h2 {
     margin-bottom: 20px;
     color: #333;
 }
 
-.contact-info p {
-    font-size: 16px;
-     line-height: 1.6;
+
+.input-group {
     margin-bottom: 15px;
+    text-align: left;
 }
 
-.contact-info i {
-    color: #4c91af;
-      margin-right: 10px;
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
 }
 
-.right-section h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input, form textarea {
+.input-group input {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
-}
-
-form textarea {
-    resize: vertical;
-}
-
-form button {
-    padding: 10px;
-    background-color: #4c91af;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
 }
 
-form button:hover {
-    background-color:  #4c91af;
+
+.submit-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c91af;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
+.submit-group button:hover {
+    background-color: #4c91af;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    nav .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    nav .nav-links ul li {
+        margin-bottom: 10px;
+    }
+}
 .footer {
     background-color: white;
     color: black ; 
