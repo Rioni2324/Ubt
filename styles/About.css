@@ -7,7 +7,6 @@
     align-items: center;
 }
 
-
 .header-home {
     background-color: white;
     color: black;
@@ -15,10 +14,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-}
-
-.header-home{
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -62,10 +57,10 @@
 .burger-menu span {
     width: 25px;
     height: 3px;
-    background: white;
+    background: black;
     border-radius: 2px;
+    transition: all 0.3s ease;
 }
-
 
 .contact-info {
     text-align: right;
@@ -84,7 +79,6 @@
     display: block;
 }
 
-
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -97,6 +91,7 @@
         padding: 10px;
         border-radius: 5px;
         width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
@@ -226,6 +221,55 @@ button:hover {
 }
 
 
+@media screen and (max-width: 768px) {
+    .left-section, .right-section {
+        width: 100%; 
+    }
+
+    .content-wrapper {
+        gap: 20px; 
+    }
+
+    .right-section h1 {
+        font-size: 28px; 
+    }
+
+    .right-section p {
+        font-size: 14px; 
+    }
+
+    .Button button {
+        width: 100%; 
+        padding: 12px 0;
+    }
+
+    .years-experience {
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .right-section h1 {
+        font-size: 24px; 
+    }
+
+    .right-section p {
+        font-size: 12px;
+    }
+
+    .years-experience {
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Button button {
+        padding: 15px; 
+    }
+}
+
 .tech-offerings {
     background: #f9f9f9;
     padding: 50px;
@@ -280,6 +324,35 @@ button:hover {
     color: #666;
 }
 
+
+
+@media (max-width: 1024px) {
+    .tech-services {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .tech-services {
+        grid-template-columns: 1fr; 
+    }
+
+    .tech-item {
+        padding: 15px;
+    }
+
+    .tech-item h3 {
+        font-size: 18px; 
+    }
+
+    .tech-item .tech-icon {
+        font-size: 25px; 
+    }
+}
+
+
 .our-partners {
     padding: 50px;
     background: #f9f9f9;
@@ -310,6 +383,36 @@ button:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+
+
+@media (max-width: 1024px) {
+    .partners-images {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+
+    .partners-images img {
+        height: 120px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .partners-images {
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+    }
+
+    .partners-images img {
+        height: 100px; 
+    }
+
+    .our-partners h2 {
+        font-size: 24px; 
+    }
+}
+
 
 
 .footer {

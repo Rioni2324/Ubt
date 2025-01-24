@@ -7,7 +7,6 @@
     align-items: center;
 }
 
-
 .header-home {
     background-color: white;
     color: black;
@@ -15,10 +14,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-}
-
-.header-home{
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -62,10 +57,10 @@
 .burger-menu span {
     width: 25px;
     height: 3px;
-    background: white;
+    background: black;
     border-radius: 2px;
+    transition: all 0.3s ease;
 }
-
 
 .contact-info {
     text-align: right;
@@ -84,7 +79,6 @@
     display: block;
 }
 
-
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -97,6 +91,7 @@
         padding: 10px;
         border-radius: 5px;
         width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
