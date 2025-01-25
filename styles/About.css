@@ -204,7 +204,7 @@ body {
     margin: 20px 0;
 }
 
-button {
+.button {
     background: #2b61f3;
     color: white;
     padding: 10px 20px;
@@ -212,10 +212,11 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-decoration: none;
     
 }
 
-button:hover {
+.button:hover {
     background: #1e4ecf;
     
 }

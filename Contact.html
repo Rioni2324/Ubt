@@ -38,8 +38,8 @@
         <div class="left-section">
             <h2>Rreth Nesh</h2>
         <div class="contact-info">
-            <p><i class="fas fa-map-marker-alt"></i><strong> Lokacioni:</strong> Prishtinë</p>
-            <p><i class="fas fa-phone-alt"></i><strong> Numri:</strong> 049 123 456</p>        
+            <p><i class="fas fa-map-marker-alt"></i><strong> Lokacioni:</strong> Prishtinë</p><br>
+            <p><i class="fas fa-phone-alt"></i><strong> Numri:</strong> 049 123 456</p>      <br>  
         <p><i class="fas fa-envelope"></i><strong> Emaili:</strong> Tech@gmail.com</p>
             </div>
  </div>
@@ -47,27 +47,26 @@
      <div class="right-section">
               <h2>Na Kontaktoni</h2>
                 <form action="#" method="POST">
-                   <input type="text" id="emri" name="emri" placeholder="Emri" required>
-                      <input type="text" id="mbemri" name="mbemri" placeholder="Mbiemri" required>
-                   <input type="email" id="email" name="email" placeholder="Emaili" required>
-                    <input type="text" id="telefon" name="telefon" placeholder="Nr Telefonit" required>
-                    <textarea id="mesazh" name="mesazh" rows="4" placeholder="Mesazhi" required></textarea>
+                   <input type="text" id="emri" name="emri" placeholder="Emri" >
+                      <input type="text" id="mbemri" name="mbiemri" placeholder="Mbiemri" >
+                   <input type="email" id="email" name="email" placeholder="Emaili" >
+                    <input type="text" id="telefon" name="telefon" placeholder="Nr Telefonit" >
+                    <textarea id="mesazh" name="mesazh" rows="4" placeholder="Mesazhi" ></textarea>
                    <button type="submit">Dërgo</button>
                </form>
         </div>
     </div>
 
-    <div class="image-container">
-           <img src="8.png" style="width: 100%; height: auto; margin-top: 30px;">
-    </div>
+    
+<br><br><br><br>
 
 
     <footer class="footer">
         <p>&copy; 2024 Tech Solutions. All Rights Reserved.</p>
         <ul class="footer-links">
-      <li><a href="#privacy">Privacy Policy</a></li>
-        <li><a href="#terms">Terms of Service</a></li>
-     <li><a href="#contact">Contact Us</a></li>
+      <li><a href="Home.html">Ballina</a></li>
+        <li><a href="About.html">Rreth nesh</a></li>
+     <li><a href="Contact.html">Kontaktoni</a></li>
         </ul>
     </footer>
 
@@ -75,4 +74,66 @@
     
     <script src="index.js"></script>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+    
+       
+    
+        form.addEventListener("submit", function (event) {
+            let isValid = true;
+            let errorMessages = [];
+    
+            
+            const emri = document.getElementById("emri");
+            const mbiemri = document.getElementById("mbiemri");
+            const email = document.getElementById("email");
+            const telefon = document.getElementById("telefon");
+            const mesazh = document.getElementById("mesazh");
+    
+            
+            if (!emri || emri.value.trim() === "") {
+                isValid = false;
+                errorMessages.push("Ju lutem plotësoni emrin.");
+            }
+            if (!mbiemri || mbiemri.value.trim() === "") {
+                isValid = false;
+                errorMessages.push("Ju lutem plotësoni mbiemrin.");
+            }
+            if (!email || !validateEmail(email.value.trim())) {
+                isValid = false;
+                errorMessages.push("Ju lutem plotësoni një email të vlefshëm.");
+            }
+            if (!telefon || !validatePhone(telefon.value.trim())) {
+                isValid = false;
+                errorMessages.push("Ju lutem plotësoni një numër telefoni të vlefshëm.");
+            }
+            if (!mesazh || mesazh.value.trim() === "") {
+                isValid = false;
+                errorMessages.push("Ju lutem shkruani mesazhin tuaj.");
+            }
+    
+        
+            if (!isValid) {
+                event.preventDefault();
+                alert(errorMessages.join("\n"));
+            } else {
+                console.log("Forma u plotesua me sukses!");
+            }
+        });
+    });
+    
+   
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return re.test(email);
+    }
+    
+    
+    function validatePhone(phone) {
+        const re = /^[0-9]{7,15}$/;
+        return re.test(phone);
+    }
+    </script>
+    
 </html>

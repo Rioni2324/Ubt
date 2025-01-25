@@ -140,10 +140,17 @@ body {
     padding: 15px 30px;
     background-color: #0056b3;
     color: black;
+    background-color: #e0ebec;
+    color: #0056b3;
     font-weight: bold;
     border-radius: 50px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #7081825f;
+    color: #0056b3;
 }
 
 .hero-image img {

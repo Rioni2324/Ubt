@@ -64,11 +64,14 @@
 
 .contact-info {
     text-align: right;
+
 }
 
 .contact-info p {
     margin: 0;
     font-size: 14px;
+  margin-bottom: -6px !important;
+    
 }
 
 .contact-info a {
@@ -77,6 +80,7 @@
     text-decoration: none;
     font-size: 16px;
     display: block;
+    
 }
 
 @media (max-width: 768px) {
@@ -143,7 +147,7 @@ body {
 }
 
 .contact-info p {
-    font-size: 16px;
+    font-size: 14px;
      line-height: 1.6;
     margin-bottom: 15px;
 }
