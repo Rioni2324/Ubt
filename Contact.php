@@ -1,27 +1,49 @@
+<?php
+require_once 'Database.php';
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $database = new Database();
+    $conn = $database->getConnection();
+
+    $emri = $_POST['emri'];
+    $mbiemri = $_POST['mbiemri'];
+    $email = $_POST['email'];
+    $telefon = $_POST['telefon'];
+    $mesazh = $_POST['mesazh'];
+
+    $query = "INSERT INTO contacts (emri, mbiemri, email, telefon, mesazh) VALUES (?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($query);
+    $stmt->execute([$emri, $mbiemri, $email, $telefon, $mesazh]);
+
+    echo "<p>Mesazhi u dërgua!</p>";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechSolutions</title>
-    <link rel="stylesheet" href="styles/Contact.css">
+    <link rel="stylesheet" href="Contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header-home">
         <div class="container-header">
             <div class="logo-header">
-                <img src="Images/logo-removebg-preview.png" alt="Tech Solutions Logo">
+                <img src="logo-removebg-preview.png" alt="Tech Solutions Logo">
             </div>
             <nav class="navbar">
                 <ul class="nav-links">
-                    <li><a href="Home.html">BALLINA</a></li>
-                    <li><a href="About.html">RRETH NESH</a></li>
-                    <li><a href="Services.html">SHERBIMET</a></li>
-                    <li><a href="Blog.html">BLOG</a></li>
-                    <li><a href="Contact.html">NA KONTAKTONI</a></li>
-                    <li><a href="Register.html" class="btn">REGJISTROHU</a></li>
-                    <li><a href="Login.html" class="btn">KYQU</a></li>
+                <li><a href="index.php">BALLINA</a></li>
+                    <li><a href="about.php">RRETH NESH</a></li>
+                    <li><a href="services.php">SHERBIMET</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contact.php">NA KONTAKTONI</a></li>
+                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="login.php" class="btn">KYQU</a></li>
                 </ul>
                 <div class="burger-menu">
                     <span></span>
@@ -44,9 +66,9 @@
 
      <div class="right-section">
               <h2>Na Kontaktoni</h2>
-                <form action="#" method="POST">
+                <form action="contact.php" method="POST">
                    <input type="text" id="emri" name="emri" placeholder="Emri" >
-                      <input type="text" id="mbemri" name="mbiemri" placeholder="Mbiemri" >
+                      <input type="text" id="mbiemri" name="mbiemri" placeholder="Mbiemri" >
                    <input type="email" id="email" name="email" placeholder="Emaili" >
                     <input type="text" id="telefon" name="telefon" placeholder="Nr Telefonit" >
                     <textarea id="mesazh" name="mesazh" rows="4" placeholder="Mesazhi" ></textarea>
@@ -62,9 +84,9 @@
     <footer class="footer">
         <p>&copy; 2024 Tech Solutions. All Rights Reserved.</p>
         <ul class="footer-links">
-      <li><a href="Home.html">Ballina</a></li>
-        <li><a href="About.html">Rreth nesh</a></li>
-     <li><a href="Contact.html">Kontaktoni</a></li>
+      <li><a href="index.php">Ballina</a></li>
+        <li><a href="about.php">Rreth nesh</a></li>
+     <li><a href="contact.php">Kontaktoni</a></li>
         </ul>
     </footer>
 
