@@ -1,3 +1,25 @@
+<?php
+require_once 'Database.php';
+require_once 'User.php';
+
+$database = new Database();
+$user = new User($database);
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if($user->login($_POST['email'], $_POST['password'])) {
+        if($_SESSION['user_id']) {
+            header("Location: index-login.php");
+        } else {
+            header("Location: index.php");
+        }
+        exit;
+    } else {
+        $error = "Email ose password i gabuar";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +29,11 @@
     <link rel="stylesheet" href="styles/Login.css">
 </head>
 <body>
+
+<?php if(isset($error)): ?>
+    <div class="error"><?= $error ?></div>
+<?php endif; ?>
+
     <header class="header-home">
         <div class="container-header">
             <div class="logo-header">
@@ -14,13 +41,13 @@
             </div>
             <nav class="navbar">
                 <ul class="nav-links">
-                    <li><a href="Home.html">BALLINA</a></li>
-                    <li><a href="About.html">RRETH NESH</a></li>
-                    <li><a href="Services.html">SHERBIMET</a></li>
-                    <li><a href="Blog.html">BLOG</a></li>
-                    <li><a href="Contact.html">NA KONTAKTONI</a></li>
-                    <li><a href="Register.html" class="btn">REGJISTROHU</a></li>
-                    <li><a href="Login.html" class="btn">KYQU</a></li>
+                    <li><a href="index.php">BALLINA</a></li>
+                    <li><a href="about.php">RRETH NESH</a></li>
+                    <li><a href="services.php">SHERBIMET</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contact.php">NA KONTAKTONI</a></li>
+                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="login.php" class="btn">KYQU</a></li>
                 </ul>
                 <div class="burger-menu">
                     <span></span>
@@ -34,7 +61,7 @@
 
     <div class="container">
         <h2>Kyçu tani!</h2>
-        <form action="#" method="POST">
+        <form action="login.php" method="POST">
             <div class="input-group">
                 <label for="name">Emri dhe Mbiemri</label>
                 <input type="text" id="name" name="name">

@@ -20,7 +20,7 @@ $misioni = $conn->query("SELECT * FROM vizion_mision WHERE lloji = 'misioni'")->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Solutions</title>
     <link rel="icon" href="logo-head.png" type="image/png"> 
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="styles/home.css">
     
 </head>
 <body>
@@ -28,7 +28,7 @@ $misioni = $conn->query("SELECT * FROM vizion_mision WHERE lloji = 'misioni'")->
     <header class="header-home">
         <div class="container-header">
             <div class="logo-header">
-                <img src="logo-removebg-preview.png" alt="Tech Solutions Logo">
+                <img src="Images/logo-removebg-preview.png" alt="Tech Solutions Logo">
             </div>
             <nav class="navbar">
                 <ul class="nav-links">
@@ -65,10 +65,10 @@ $misioni = $conn->query("SELECT * FROM vizion_mision WHERE lloji = 'misioni'")->
     <div class="hero-content">
         <h1><?= $hero['titulli'] ?></h1>
         <p><?= $hero['pershkrimi'] ?></p>
-        <a href="Contact.html" class="cta-button"><?= $hero['butoni'] ?></a>
+        <a href="contact.php" class="cta-button"><?= $hero['butoni'] ?></a>
     </div>
     <div class="hero-image">
-        <img src="<?= $hero['foto'] ?>" alt="Tech Solutions Hero Image">
+        <img src="Images/<?= $hero['foto'] ?>" alt="Tech Solutions Hero Image">
     </div>
 </section> <br> <br>
 
@@ -95,7 +95,7 @@ $misioni = $conn->query("SELECT * FROM vizion_mision WHERE lloji = 'misioni'")->
             <?= $vizioni['permbajtja'] ?>
         </div>
         <div class="vision-image">
-            <img src="<?= $vizioni['foto'] ?>" alt="Vision Image">
+            <img src="Images/<?= $vizioni['foto'] ?>" alt="Vision Image">
         </div>
     </div>
 </section> <br> <br> <br> <br>
@@ -103,7 +103,7 @@ $misioni = $conn->query("SELECT * FROM vizion_mision WHERE lloji = 'misioni'")->
 
 <section class="mission-section">
     <div class="image-content">
-        <img src="<?= $misioni['foto'] ?>" alt="Mission Image">
+        <img src="Images/<?= $misioni['foto'] ?>" alt="Mission Image">
     </div>
     <div class="text-content">
         <h2><?= $misioni['titulli'] ?></h2>
