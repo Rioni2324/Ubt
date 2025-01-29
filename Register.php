@@ -1,3 +1,30 @@
+<?php 
+require_once 'Database.php';
+require_once 'User.php';
+
+$database = new Database();
+$user = new User($database);
+
+$errors = [];
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Validimi
+    if(empty($_POST['emri'])) $errors[] = "Emri është i detyrueshëm";
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) $errors[] = "Email jo valid";
+    if(strlen($_POST['password']) < 6) $errors[] = "Passwordi duhet të ketë të paktën 6 karaktere";
+    if($_POST['password'] !== $_POST['confirm-password']) $errors[] = "Passwordet nuk përputhen";
+
+    if(empty($errors)) {
+        if($user->register($_POST['emri'], $_POST['email'], $_POST['password'])) {
+            header("Location: login.php");
+            exit;
+        } else {
+            $errors[] = "Regjistrimi dështoi";
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +33,19 @@
     <title>Register Form</title>
     <link rel="stylesheet" href="styles/Register.css">
 </head>
+
 <body>
+
+    <?php if(!empty($errors)): ?>
+    <div class="errors">
+        <?php foreach($errors as $error): ?>
+            <p><?= $error ?></p>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+
+
+
     <header class="header-home">
         <div class="container-header">
             <div class="logo-header">
@@ -14,13 +53,13 @@
             </div>
             <nav class="navbar">
                 <ul class="nav-links">
-                    <li><a href="Home.html">BALLINA</a></li>
-                    <li><a href="About.html">RRETH NESH</a></li>
-                    <li><a href="Services.html">SHERBIMET</a></li>
-                    <li><a href="Blog.html">BLOG</a></li>
-                    <li><a href="Contact.html">NA KONTAKTONI</a></li>
-                    <li><a href="Register.html" class="btn">REGJISTROHU</a></li>
-                    <li><a href="Login.html" class="btn">KYQU</a></li>
+                <li><a href="index.php">BALLINA</a></li>
+                    <li><a href="about.php">RRETH NESH</a></li>
+                    <li><a href="services.php">SHERBIMET</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contact.php">NA KONTAKTONI</a></li>
+                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="login.php" class="btn">KYQU</a></li>
                 </ul>
                 <div class="burger-menu">
                     <span></span>
@@ -34,10 +73,10 @@
 
     <div class="container">
         <h2>Regjistrohu tani!</h2>
-        <form action="#" method="POST">
+        <form action="register.php" method="POST">
             <div class="input-group">
                 <label for="name">Emri dhe Mbiemri</label>
-                <input type="text" id="name" name="name" >
+                <input type="text" id="name" name="emri" >
             </div>
 
             <div class="input-group">
@@ -64,9 +103,9 @@
     <footer class="footer">
         <p>&copy; 2024 Tech Solutions. All Rights Reserved.</p>
         <ul class="footer-links">
-            <li><a href="Home.html">Ballina</a></li>
-            <li><a href="About.html">Rreth nesh</a></li>
-         <li><a href="Contact.html">Kontaktoni</a></li>
+            <li><a href="index.php">Ballina</a></li>
+            <li><a href="about.php">Rreth nesh</a></li>
+         <li><a href="contact.php">Kontaktoni</a></li>
         </ul>
     </footer>
 
