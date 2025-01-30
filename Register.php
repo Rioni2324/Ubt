@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <li><a href="services.php">SHERBIMET</a></li>
                     <li><a href="blog.php">BLOG</a></li>
                     <li><a href="contact.php">NA KONTAKTONI</a></li>
-                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="Register.php" class="btn">REGJISTROHU</a></li>
                     <li><a href="login.php" class="btn">KYQU</a></li>
                 </ul>
                 <div class="burger-menu">
@@ -73,7 +73,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <div class="container">
         <h2>Regjistrohu tani!</h2>
-        <form action="register.php" method="POST">
+        <form action="Register.php" method="POST">
             <div class="input-group">
                 <label for="name">Emri dhe Mbiemri</label>
                 <input type="text" id="name" name="emri" >

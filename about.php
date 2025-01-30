@@ -33,7 +33,7 @@ $tech_services = $conn->query("SELECT * FROM tech_services")->fetchAll();
                     <li><a href="services.php">SHERBIMET</a></li>
                     <li><a href="blog.php">BLOG</a></li>
                     <li><a href="contact.php">NA KONTAKTONI</a></li>
-                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="Register.php" class="btn">REGJISTROHU</a></li>
                     <li><a href="login.php" class="btn">KYQU</a></li>
                 </ul>
                 <div class="burger-menu">
@@ -49,7 +49,7 @@ $tech_services = $conn->query("SELECT * FROM tech_services")->fetchAll();
         <div class="content-wrapper">     
             <div class="left-section">
                 <div class="main-image">
-                    <img src="<?= $about['foto'] ?>" alt="Main person">
+                    <img src="Images/<?= $about['foto'] ?>" alt="Main person">
                 </div>
                 <div class="years-experience">
                     <?php foreach($stats as $stat): ?>
@@ -91,7 +91,7 @@ $tech_services = $conn->query("SELECT * FROM tech_services")->fetchAll();
         <div class="slider-container">
             <div class="slider-track">
                 <?php foreach($partners as $partner): ?>
-                <img src="<?= $partner['logo'] ?>" alt="<?= $partner['emri'] ?>">
+                <img src="Images/<?= $partner['logo'] ?>" alt="<?= $partner['emri'] ?>">
                 <?php endforeach; ?>
             </div>
         </div>

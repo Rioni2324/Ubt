@@ -45,7 +45,7 @@ $misioni = $conn->query("SELECT * FROM vizion_mision WHERE lloji = 'misioni'")->
                      <a href="index-login.php"></a>
                 <?php else: ?>
                    
-                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="Register.php" class="btn">REGJISTROHU</a></li>
                     <li><a href="login.php" class="btn">KYQU</a></li>
                 <?php endif; ?>
                 </ul>

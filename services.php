@@ -33,7 +33,7 @@ $testimonials = $conn->query("SELECT * FROM testimonials")->fetchAll();
                     <li><a href="services.php">SHERBIMET</a></li>
                     <li><a href="blog.php">BLOG</a></li>
                     <li><a href="contact.php">NA KONTAKTONI</a></li>
-                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="Register.php" class="btn">REGJISTROHU</a></li>
                     <li><a href="login.php" class="btn">KYQU</a></li>
                 </ul>
                 <div class="burger-menu">

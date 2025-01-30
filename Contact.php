@@ -26,14 +26,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechSolutions</title>
-    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="styles/Contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header-home">
         <div class="container-header">
             <div class="logo-header">
-                <img src="logo-removebg-preview.png" alt="Tech Solutions Logo">
+                <img src="Images/logo-removebg-preview.png" alt="Tech Solutions Logo">
             </div>
             <nav class="navbar">
                 <ul class="nav-links">
@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <li><a href="services.php">SHERBIMET</a></li>
                     <li><a href="blog.php">BLOG</a></li>
                     <li><a href="contact.php">NA KONTAKTONI</a></li>
-                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="Register.php" class="btn">REGJISTROHU</a></li>
                     <li><a href="login.php" class="btn">KYQU</a></li>
                 </ul>
                 <div class="burger-menu">

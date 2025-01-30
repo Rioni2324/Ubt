@@ -46,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <li><a href="services.php">SHERBIMET</a></li>
                     <li><a href="blog.php">BLOG</a></li>
                     <li><a href="contact.php">NA KONTAKTONI</a></li>
-                    <li><a href="register.php" class="btn">REGJISTROHU</a></li>
+                    <li><a href="Register.php" class="btn">REGJISTROHU</a></li>
                     <li><a href="login.php" class="btn">KYQU</a></li>
                 </ul>
                 <div class="burger-menu">
@@ -84,9 +84,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <footer class="footer">
         <p>&copy; 2024 Tech Solutions. All Rights Reserved.</p>
         <ul class="footer-links">
-            <li><a href="Home.html">Ballina</a></li>
-            <li><a href="About.html">Rreth nesh</a></li>
-         <li><a href="Contact.html">Kontaktoni</a></li>
+            <li><a href="index.php">Ballina</a></li>
+            <li><a href="about.php">Rreth nesh</a></li>
+         <li><a href="contact.php">Kontaktoni</a></li>
         </ul>
     </footer>
 
