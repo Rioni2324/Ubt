@@ -63,8 +63,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h2>Kyçu tani!</h2>
         <form action="login.php" method="POST">
             <div class="input-group">
-                <label for="name">Emri dhe Mbiemri</label>
-                <input type="text" id="name" name="name">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
             </div>
 
 
